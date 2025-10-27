@@ -1,10 +1,11 @@
 import './Todo.css';
 
-function Todo(props) {
-    console.log(props)
+function Todo({title, paragraph}) {
+    console.log(title, paragraph);
     return (
          <div className="todo">
-     <h2>Finish Frontend Simplified</h2>
+     <h2>{title}</h2>
+        <p>{paragraph}</p>
      <button>Delete</button>
      </div>
     );
