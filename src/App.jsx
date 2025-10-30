@@ -2,7 +2,7 @@ import './App.css';
 import Todo from './Components/Todo.jsx';
 import Title from './Components/Title.jsx';
 import Modal from './Components/modal.jsx';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Counter from './Components/counter.jsx'; 
 
 function App() {
@@ -21,6 +21,10 @@ function cancelModal() {
 function confirmModal() {
   setShowModal (false);
 }
+
+useEffect(() => {
+console.log('App mounted');
+}, [])
 
   return (
     <div>
