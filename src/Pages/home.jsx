@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+import axios from "axios";
+
 function Home() {
+    useEffect(() => {
+        async function main() {
+        console.log(axios.get("https://jsonplaceholder.typicode.com/users"))
+        }
+        main();
+    }, []);
     return <h1> Home </h1>;
 }
 
